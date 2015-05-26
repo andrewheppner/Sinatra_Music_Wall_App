@@ -65,6 +65,6 @@ post '/login' do
 end
 
 post '/logout' do 
-  current_user.destroy
+  session.clear
   redirect '/'
 end
