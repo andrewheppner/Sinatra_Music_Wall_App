@@ -1,0 +1,30 @@
+<h3><a href="/tracks<%= @track.id %>"><%= @track.artist %></a> : </h3>
+<p>
+  <small>Added on: <%= @track.created_at %></small>
+</p>
+
+<p>
+  <%= @track.song_title  %>
+</p>
+
+<p>
+  <a href = "<%= @track.url %>"><%= @track.url %></a>
+</p>
+
+<hr/>
+
+<p>Other songs from this Artist/Group:</p>
+<% @other_tracks.each do |track| %>
+  <div class="track">
+    <h3><%= track.artist %>:</h3>
+    <small><p>Posted on: <%= track.created_at %></p></small>
+    <p>
+      <%= track.song_title %>
+    </p>
+    <p>
+      <a href = "<%= track.url %>"><%= track.url %></a>
+    </p>
+  </div>
+<% end %>
+
+<a href="/tracks">Back to All Tracks</a>

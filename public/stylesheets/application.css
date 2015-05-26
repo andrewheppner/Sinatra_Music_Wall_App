@@ -1,0 +1,36 @@
+body {
+  margin-top: 100px;
+  background-color: #1C1C12;
+}
+
+.btn.btn-primary.btn-lg {
+  color: #FFF ;
+  font-weight: bold;
+  background-color: #404040 ;
+  border-color: #404040 ;
+  margin: 100px auto 10px auto;
+  width: 200px;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+  margin: 0px;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+  background-color: #11110B;
+}
+
+.jumbotron {
+  color:#FFF;
+  background-color: #1C1C12;
+}
+
+.col-sm-10  {
+  width: 430px;
+}
+
+.col-sm-2.control-label {
+  color: #FFF;
+}
