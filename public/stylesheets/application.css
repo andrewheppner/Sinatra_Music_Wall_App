@@ -34,3 +34,7 @@ img {
 .col-sm-2.control-label {
   color: #FFF;
 }
+
+.btn.btn-default.navbar-btn.navbar-right {
+  margin-left: 15px;
+}
