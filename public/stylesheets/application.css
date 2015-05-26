@@ -22,6 +22,20 @@ img {
   background-color: #11110B;
 }
 
+.navbar-inverse .navbar-brand {
+  color: #FFF;
+  font-size: 30px;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #F00000; 
+  font-size: 30px;
+}
+
+.navbar-text{
+  color: #FFF;
+}
+
 .jumbotron {
   color:#FFF;
   background-color: #1C1C12;
@@ -34,3 +48,4 @@ img {
 .col-sm-2.control-label {
   color: #FFF;
 }
+
