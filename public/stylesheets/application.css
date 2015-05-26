@@ -61,3 +61,13 @@ img {
 .form-horizontal {
   margin-top: 60px;
 }
+
+.thumbnail {
+  height: 454px;
+  width: 350px;
+  overflow: visible;
+}
+
+.caption {
+  background-color: #1C1C12
+}
