@@ -1,4 +1,14 @@
 # Homepage (Root path)
+set sessions: true
+
+helpers do 
+  
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+end
+
 get '/' do
   erb :index
 end
@@ -16,7 +26,8 @@ post '/tracks' do
   @track = Track.new(
     song_title: params[:song_title],
     artist: params[:artist],
-    url: params[:url]
+    url: params[:url],
+    user_id: current_user
     )
   if @track.save
     redirect '/tracks'
@@ -36,8 +47,12 @@ post '/register' do
     username: params[:username],
     password: params[:password]
     )
-  @user.save
-  redirect '/'
+  if @user.save
+    session[:user_id] = @user.id
+    redirect '/tracks'
+  else
+    redirect '/'
+  end
 end
 
 post '/login' do 
@@ -49,3 +64,26 @@ post '/login' do
     redirect '/'
   end
 end
+
+post '/logout' do 
+  session.clear
+  redirect '/'
+end
+
+post '/upvote' do 
+  @upvote = Upvote.create(
+    user_id: current_user.id,
+    track_id: params[:track]
+    )
+  redirect request.referer
+end
+
+
+
+
+
+
+
+
+
+

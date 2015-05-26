@@ -3,9 +3,22 @@
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <img src="images/hand.png">
-        <div class="caption">
-          <h3><a href="/tracks/<%= track.id %>"><%= track.artist %></a></h3>
-          <p><%= track.song_title %></p>
+        <div class="caption clearfix">
+          <div class='caption-text'>
+            <h3><a href="/tracks/<%= track.id %>"><%= track.artist %></a></h3>
+            <p><%= track.song_title %></p>
+          </div>
+          <%= track.upvote_count %>
+          <div class='caption-vote'>
+  <% unless track.upvoted_by_current_user? %>
+    <form class='upvote' method='post' action='/upvote'>
+      <input type='hidden' value='<%= track.id %>' name='track'>
+      <button  class ='hidesy' type='submit'>
+        <i class="icon-heart icon-3x"></i> Like this Shit
+      </button>
+    </form>
+  <% end %>
+</div>
         </div>
       </div>
     </div>

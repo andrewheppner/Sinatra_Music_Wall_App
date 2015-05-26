@@ -49,6 +49,7 @@ img {
   color: #FFF;
 }
 
+
 .page-header h1 {
   color: #FFF;
   font-size: 85px;
@@ -69,5 +70,33 @@ img {
 }
 
 .caption {
-  background-color: #1C1C12
+  background-color: #FFF;
+}
+
+.btn.btn-default.navbar-btn.navbar-right {
+  margin-left: 25px;
+}
+
+.caption-text {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.caption-vote {
+  width: 50% ;
+  float: left;
+}
+
+form.upvote {
+  margin-top: 15px;
+}
+
+.icon-heart:hover {
+  color: #000;
+}
+
+.hidesy{
+  border: none;
+  background-color: #FFF;
 }
