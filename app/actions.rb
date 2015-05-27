@@ -75,7 +75,7 @@ post '/upvote' do
     user_id: current_user.id,
     track_id: params[:track]
     )
-  redirect request.referer
+  redirect '/tracks'
 end
 
 

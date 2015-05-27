@@ -84,8 +84,14 @@ img {
 }
 
 .caption-vote {
-  width: 50% ;
+  width: 25% ;
   float: left;
+}
+
+.upvote_count {
+  float: left;
+  width: 25%;
+  margin-top: 25px;
 }
 
 form.upvote {

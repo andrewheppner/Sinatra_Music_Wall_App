@@ -1,9 +1,9 @@
 <div class='caption-vote'>
-  <% unless @track.upvoted_by_current_user? %>
+  <% unless @track.upvoted_by_current_user?(current_user.id) %>
     <form class='upvote' method='post' action='/upvote'>
-      <input type='hidden' value='<%= track.id %>' name='track'>
+      <input type='hidden' value='<%= @track.id %>' name='track'>
       <button  class ='hidesy' type='submit'>
-        <i class="icon-heart icon-3x"></i> Like this Shit
+        <i class="icon-heart icon-3x"></i> 
       </button>
     </form>
   <% end %>

@@ -9,8 +9,8 @@ class Track < ActiveRecord::Base
     Upvote.where({track_id: id }).count
   end
 
-  def upvoted_by_current_user?
-    Upvote.where({track_id: id, user_id: current_user.id}).count > 0
+  def upvoted_by_current_user?(user_id)
+    Upvote.where({track_id: id, user_id: user_id}).count > 0
   end
 
 end
